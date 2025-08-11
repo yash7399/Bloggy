@@ -21,7 +21,7 @@ const App = () => {
     <div>
       <Toaster />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Register />} />
         <Route path="/register" element={<Register />} />
         <Route path="/adminregister" element={<AdminRegister />} />
         <Route path="/login" element={<UnifiedLogin />} />
