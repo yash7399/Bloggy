@@ -55,13 +55,20 @@ const BlogList = () => {
         })}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 sm:mx-16 xl:mx-40">
-        {filteredBlogs()
-          .filter((blog) => (menu === "All" ? true : blog.category === menu))
-          .map((blog) => (
-            <BlogCard key={blog._id} blog={blog} />
-          ))}
-      </div>
+      
+      {filteredBlogs().filter((blog) => (menu === "All" ? true : blog.category === menu)).length === 0 ? (
+        <div className="text-center text-lg font-semibold text-gray-500 my-20">
+          Blogs are loading...
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-24 sm:mx-16 xl:mx-40">
+          {filteredBlogs()
+            .filter((blog) => (menu === "All" ? true : blog.category === menu))
+            .map((blog) => (
+              <BlogCard key={blog._id} blog={blog} />
+            ))}
+        </div>
+      )}
     </div>
   );
 };
