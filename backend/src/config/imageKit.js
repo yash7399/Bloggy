@@ -8,4 +8,6 @@ const imagekit = new ImageKit({
     urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT
 });
 
+console.log(process.env.IMAGEKIT_URL_ENDPOINT)
+
 export default imagekit;

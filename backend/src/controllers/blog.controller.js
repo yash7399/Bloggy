@@ -37,6 +37,8 @@ export const addBlog = async (req, res) => {
             ]
         });
 
+        console.log(optimizedImageURL)
+
         const image = optimizedImageURL;
 
         await Blog.create({
