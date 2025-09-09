@@ -197,9 +197,8 @@ const Blog = () => {
       />
       <div className="text-center mt-20 text-gray-600">
         <h1 className="text-2xl sm:text-5xl font-semibold max-w-2xl mx-auto text-gray-800">
-          Loading
+          Loading.. Please wait
         </h1>
-        <h2 className="my-5 max-w mx-auto">The requested blog was not found. It may have been removed or not created yet.</h2>
       </div>
     </>
   );
