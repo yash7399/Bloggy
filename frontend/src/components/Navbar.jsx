@@ -4,7 +4,6 @@ import { useAppContext } from "../context/AppContext.jsx";
 
 const Navbar = () => {
   const { navigate, token, userType, userData, logout } = useAppContext();
-
   return (
     <div className="sticky top-0 bg-white z-50">
       <div className="flex justify-between items-center py-5 mx-8 sm:mx-20 xl:mx-32">

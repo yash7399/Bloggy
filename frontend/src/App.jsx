@@ -10,7 +10,7 @@ import AddBlog from "./pages/admin/AddBlog";
 import ListBlog from "./pages/admin/ListBlog";
 import Comments from "./pages/admin/Comments";
 import UnifiedLogin from "./components/UnifiedLogin";
-import Register from "./components/UserRegister";
+import Register from "./pages/UserRegister";
 import { useAppContext } from "./context/AppContext";
 import AdminRegister from "./components/AdminRegister";
 
@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/blog/:id" element={<Blog />} />
 
         {/* Admin routes - accessible to both admin and user roles */}
-        <Route path="/admin" element={token ? <Layout /> : <UnifiedLogin />}>
+          <Route path="/admin" element={token ? <Layout /> : <UnifiedLogin />}>
           <Route index element={<Dashboard />} />
           <Route path="addBlog" element={<AddBlog />} />
           <Route path="listBlog" element={<ListBlog />} />
